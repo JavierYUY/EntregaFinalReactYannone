@@ -1,0 +1,9 @@
+.Item{
+    width: 250px;
+    height: 460px;
+    margin-top: 20px;
+    margin-left: 20px;
+    border: solid;
+    border-color: black;
+    border-width: 1px;
+}

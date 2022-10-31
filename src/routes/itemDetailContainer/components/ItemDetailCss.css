@@ -1,0 +1,13 @@
+.DivPrincipal{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+
+.DivTitulo{
+    text-align: center;
+}
+
+.DivDescripcion{
+    margin: 20px;
+}
