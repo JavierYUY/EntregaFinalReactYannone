@@ -9,12 +9,13 @@ const CartProvider = ({children}) => {
     const[valorTotal, setValorTotal] = useState(0);//Valor total del carrito
 
     const agregar = (item, cantidad) => {
-        const existeItem = carrito.find((it) => it.id === item.id);
+        const existeItem = carrito.findIndex((it) => it.id === item.id);
         
-        if(existeItem === undefined){
-            setCarrito(carr => [...carr, item]);
+        if(existeItem === -1){
+            setCarrito([...carrito, item]);
             setCartidadItems(cantidadItems + cantidad);
             setValorTotal(valorTotal + (item.Valor * cantidad));
+            
         }else{
             setCartidadItems(cantidadItems + cantidad);
             setValorTotal(valorTotal + (item.Valor * cantidad));
@@ -28,4 +29,4 @@ const CartProvider = ({children}) => {
     )
 }
 
-export default CartProvider;
+export {CartContext, CartProvider};

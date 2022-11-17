@@ -1,10 +1,10 @@
 import imgCarrito from './imgCarrito.png';
 import './cartWidget.css';
-import {UseCartContext} from '../../components/context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import { Link } from 'react-router-dom';
 
 function CartWidget(){
-    const { cantidadItems } = UseCartContext();
+    const { totalProducts } = useCartContext();
 
     return(
         <div>
@@ -14,7 +14,7 @@ function CartWidget(){
                 </Link>
             </div>
             <div>
-                {cantidadItems}
+                {totalProducts}
             </div>
         </div>
     );

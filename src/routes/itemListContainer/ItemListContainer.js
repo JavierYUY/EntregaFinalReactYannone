@@ -37,7 +37,7 @@ const ItemListContainer = () => {
         <div>
             {!items ? 
                 'Cargando---' : 
-                <ItemList items={items} />
+                <ItemList items={items} key={items.id} />
             }
         </div>
     )

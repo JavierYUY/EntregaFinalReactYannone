@@ -1,16 +1,17 @@
 import Counter from '../../components/counter/Counter';
 import { useState } from 'react';
-import {UseCartContext} from '../../components/context/CartContext';
+import { useCartContext } from '../../context/CartContext';
 import './components/ItemDetailCss.css'
 
 const ItemDetail = ({item}) => {
-    const {agregar} = UseCartContext();
+    const {addProduct} = useCartContext();
     const[itemCount, setItemCount] = useState(0);
 
     const onAdd = (cantidad) => {
         setItemCount(cantidad);
-        agregar(item, cantidad);
+        addProduct(item, cantidad);
         setItemCount(itemCount + cantidad);
+
         alert('Item Agregado');
     };
 
